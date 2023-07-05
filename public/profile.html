@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style/profile.css">
+  <style>
+body {
+  background: linear-gradient(135deg, #c850c0, #4158d0);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  font-size: 16px;
+}
+body {
+      background: linear-gradient(135deg, #c850c0, #4158d0);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .profile-button, .home-button {
+      padding: 10px 20px;
+      background-color: #3333339c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .profile-button:hover, .home-button:hover {
+      background-color: #555;
+    }
+
+    #app {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #app.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <div class="buttons-container">
+        <button class="profile-button" onclick="goProfile()">Profile</button>
+        <button class="home-button" onclick="goHome()">Home</button>
+      </div>
+      <div id="app"></div>
+      <script src="https://unpkg.com/vue@next"></script>
+      <script src="main.js"></script>
+      <script>
+        function goProfile() {
+          window.location.href = "profile.html";
+        }
+    
+        function goHome() {
+          window.location.href = "index.html#app";
+        }
+    
+        if (window.location.hash === "#app") {
+          document.getElementById("app").classList.add("show");
+        }
+      </script>
+  <div class="profile-container">
+    <div class="profile-image">
+      <!-- Ganti "link-gambar" dengan URL gambar profil Anda -->
+      <img src="https://i.pinimg.com/originals/f4/25/23/f42523e828c16102c2294d726e1a5378.jpg" alt="Profile Image">
+    </div>
+    <div class="profile-details">
+      <h2>Nur Fitriana</h2>
+      <p>NPM : 213510191</p>
+      <p>Kelas : 4B</p>
+      <p>Praktikum Pemograman Berbasis Komponen</p>
+      <p>Teknik Informatika</p>
+      <p>Universitas Islam Riau</p>
+    </div>
+  </div>
+</body>
+</html>

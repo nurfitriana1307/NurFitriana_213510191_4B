@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="style/main.css">
+  <style>
+    body {
+      background-image: url("https://c.wallhere.com/photos/c5/6d/artwork_leaves_black_simple_minimalism_purple-1919731.jpg!d");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      display: flex;
+      justify-content: center; /* Mengubah letak tombol menjadi di tengah header */
+      align-items: center;
+      z-index: 1;
+    }
+
+    .profile-button, .home-button {
+      padding: 10px 20px;
+      background-color: #0f7994b4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .profile-button:hover, .home-button:hover {
+      background-color: #555555;
+    }
+
+    #app {
+      margin-top: 60px; /* Adjust the margin-top value to make space for the header */
+      display: none;
+    }
+
+    #app.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="app"></div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="main.js"></script>
+  <header>
+    <div class="buttons-container">
+      <button class="profile-button" onclick="goProfile()">Profile</button>
+      <button class="home-button" onclick="goHome()">Home</button>
+    </div>
+  </header>
+  <script>
+    function goProfile() {
+      window.location.href = "profile.html";
+    }
+
+    function goHome() {
+      window.location.href = "index.html#app";
+    }
+
+    if (window.location.hash === "#app") {
+      document.getElementById("app").classList.add("show");
+    }
+  </script>
+</body>
+</html>
